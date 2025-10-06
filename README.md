@@ -1,29 +1,28 @@
-in this README.md:
-# yolo-labeling-studio
-🎯 Advanced YOLO Labeling Tool with Real-Time Performance - A feature-rich desktop application for creating YOLO format datasets with movable edges, smart rendering, and professional annotation workflow.
+---
 
-No, there are several formatting issues with your README.md. The main problems are:
+## ✅ 1. **Repository Description**
 
-1. **Missing code block formatting** for Windows installation
-2. **Missing section headers** (##) for some sections
-3. **Incorrect markdown formatting** for the feature checklist
-4. **Broken structure** in the middle sections
+> 🎯 Professional YOLO labeling tool with real-time rendering, movable box edges, dark mode, session recovery, and planned AI-assisted pre-labeling.
 
-Here's the corrected version that you can copy and paste directly:
+---
 
+## ✅ 2. **README.md**
 
+Below is a **polished, user-friendly, and technically accurate** `README.md` that matches your code structure and future plans:
+
+```markdown
 # 🎯 YOLO Labeling Studio Pro
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green.svg)
-![Tkinter](https://img.shields.io/badge/GUI-Tkinter-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green)
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-**Professional YOLO annotation tool with real-time performance and smart features**
+**Professional YOLO annotation tool with real-time performance, movable edges, and AI-ready workflow**
 
-[Features](#-features) • [Installation](#-Installation) • [Usage](#-How to Use) • [Future Plans](#-future-plans)
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Future Plans](#-future-plans)
 
 </div>
 
@@ -31,251 +30,180 @@ Here's the corrected version that you can copy and paste directly:
 
 ## 🚀 What is This?
 
-YOLO Labeling Studio Pro is not just another annotation tool - it's your **AI-powered assistant** for creating high-quality YOLO datasets! Built with performance in mind, it transforms the tedious task of bounding box annotation into a smooth, efficient workflow.
+**YOLO Labeling Studio Pro** is a desktop application built for **serious annotators** who need speed, precision, and comfort while labeling images in YOLO format. Unlike basic tools, it offers **movable box edges**, **real-time preview**, **session recovery**, and **keyboard-driven workflow**—all in a sleek, responsive interface.
 
-### ✨ Why Choose This Tool?
-
-- ⚡ **Real-time performance** with smart rendering
-- 🎯 **Movable edges & corners** for pixel-perfect adjustments
-- 🎨 **Dark/Light mode** for comfortable long sessions
-- 📚 **Smart session management** that remembers your work
-- 🖱️ **Intuitive keyboard shortcuts** for power users
+And soon? **AI pre-labeling** using a YOLO model to auto-detect objects before you even start!
 
 ---
 
 ## 🎨 Features
 
-### Core Annotation
-- ✅ **YOLO format support** - Direct export to YOLO txt files
-- ✅ **Movable edges & corners** - Precise box adjustments
-- ✅ **Multi-class support** - Organize your objects efficiently
-- ✅ **Real-time drawing** - See boxes as you draw them
-- ✅ **Smart zoom & pan** - Navigate large images smoothly
+### ✅ Core Annotation
+- **YOLO format export** – Save directly to `.txt` files
+- **Movable corners & edges** – Resize boxes with pixel precision
+- **Multi-class support** – Define your own object classes
+- **Real-time drawing preview** – See boxes as you draw
+- **Zoom & pan navigation** – Handle large images with ease
 
-### Professional Workflow
-- ✅ **Undo/Redo history** - Never lose work accidentally
-- ✅ **Batch operations** - Process multiple images efficiently
-- ✅ **Auto-save sessions** - Resume right where you left off
-- ✅ **Progress tracking** - Know how much work remains
-- ✅ **Processed image management** - Keep workspace organized
+### ⚙️ Professional Workflow
+- **Undo/Redo (Ctrl+Z)** – Never lose work
+- **Auto-save on navigation** – Labels saved when you switch images
+- **Session recovery** – Reopen where you left off
+- **Processed image management** – Auto-move finished images
+- **Progress bar** – Track your labeling progress
 
-### User Experience
-- ✅ **Dark/Light themes** - Work comfortably day or night
-- ✅ **Comprehensive shortcuts** - Keyboard-driven workflow
-- ✅ **Visual feedback** - Clear selection and hover states
-- ✅ **Performance optimized** - Handles large datasets smoothly
+### 🌓 User Experience
+- **Dark/Light theme toggle** (`Ctrl+D`)
+- **Full keyboard shortcuts** – Power-user friendly
+- **RTL text support** – For Persian/Arabic class names
+- **Performance-optimized rendering** – Smooth even with 100+ boxes
 
 ---
 
 ## 🛠️ Installation
 
 ### Prerequisites
-- Python 3.8 or higher
-- 4GB RAM minimum (8GB recommended)
-- 500MB free disk space
+- Python 3.8+
+- ~500 MB disk space
+- (Optional) GPU not required – runs on CPU
 
-### Linux Installation
+### 🐧 Linux
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/yolo-labeling-studio-pro.git
-cd yolo-labeling-studio-pro
+git clone https://github.com/SisroCodeke/yolo-labeling-studio.git
+cd yolo-labeling-studio
 
 # Create virtual environment (recommended)
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the application
-python yolo_labeling_tool.py
+# Run the app
+python main.py
 ```
 
-### Windows Installation
+> 💡 **Note**: On some Linux distros (e.g., Ubuntu), you may need to install system packages:
+> ```bash
+> sudo apt install python3-tk python3-pil python3-opencv
+> ```
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/yolo-labeling-studio-pro.git
-cd yolo-labeling-studio-pro
+### 🪟 Windows
 
-# Create virtual environment (recommended)
+```powershell
+git clone https://github.com/SisroCodeke/yolo-labeling-studio.git
+cd yolo-labeling-studio
+
+# Create virtual environment
 python -m venv venv
 venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the application
-python yolo_labeling_tool.py
+# Run the app
+python main.py
 ```
 
-### Manual Dependency Installation
-If you prefer manual installation:
-
-```bash
-pip install opencv-python pillow numpy
-```
+> ✅ Windows users: `tkinter`, `PIL`, and `numpy` are usually included with Python, but `opencv-python` must be installed via pip.
 
 ---
 
 ## 🎮 How to Use
 
-### 🖱️ Basic Workflow
+### Quick Start
+1. Launch with `python main.py`
+2. Click **"Open Image Dir"** → select your images folder
+3. Click **"Open Label Dir"** → choose where labels will be saved
+4. Select a **class** from the left panel
+5. **Click & drag** on the image to draw a box
+6. Use **handles** to resize, or **drag inside** to move
+7. Press `Ctrl+S` to save, or let auto-save do it!
 
-1. **Launch the application**
-   ```bash
-   python yolo_labeling_tool.py
-   ```
-
-2. **Set up directories**
-   - Click "Open Image Dir" to select your images folder
-   - Click "Open Label Dir" to select where labels will be saved
-
-3. **Start annotating**
-   - Select a class from the left panel
-   - Click and drag on image to draw bounding boxes
-   - Adjust boxes using movable edges and corners
-   - Save with `Ctrl+S` or use auto-save
-
-### 🎯 Advanced Features
-
-#### Movable Edges & Corners
-- **Click corners** to resize from specific points
-- **Click edges** to adjust single sides
-- **Click inside** to move entire boxes
-- Visual cursor changes show what you're adjusting!
-
-#### Keyboard Shortcuts
-| Shortcut | Action |
-|----------|--------|
+### 🔑 Keyboard Shortcuts
+| Key | Action |
+|-----|--------|
 | `Ctrl+S` | Save labels |
 | `Ctrl+Z` | Undo |
 | `Delete` | Delete selected box |
-| `A / ←` | Previous image |
-| `D / →` | Next image |
-| `Ctrl+A` | Select all boxes |
-| `Ctrl+D` | Duplicate box |
-| `Ctrl+Shift+S` | Quick save & next |
+| `A` or `←` | Previous image |
+| `D` or `→` | Next image |
+| `Ctrl+A` | Select first box |
+| `Ctrl+D` | Duplicate selected box |
+| `Ctrl+Shift+S` | Save & go to next image |
 | `R` | Reset zoom |
-| `+ / -` | Zoom in/out |
+| `+` / `-` | Zoom in/out |
 | `I` | Reload current image |
+| `Ctrl+D` (again) | Toggle dark/light mode |
 
-#### Smart Session Management
-- Tool automatically saves your session
-- Reopens last worked-on image
-- Removes processed images from workspace
-- Maintains annotation history
-
-### 🎨 Customization
-
-Edit `config.jsonc` to customize:
-- Class names and colors
-- Keyboard shortcuts
-- UI themes and appearance
-- Performance settings
-- File paths and directories
+> 💡 Tip: Right-click a box to select it. Right-click empty space to deselect.
 
 ---
 
 ## 🔮 Future Plans
 
-### 🧠 AI-Powered Features (Coming Soon!)
+### 🤖 AI-Powered Pre-Labeling (Coming Soon!)
+We’re adding **built-in YOLO object detection** so the tool can:
+- Load a pre-trained YOLO model (e.g., YOLOv8n)
+- Auto-detect objects when an image loads
+- Let you **accept, edit, or delete** suggested boxes
+- **Dramatically reduce labeling time** by 50–80%
 
-**Smart Pre-labeling with YOLO Model**
-- Load pre-trained YOLO model
-- Auto-detect objects on image load
-- Human-in-the-loop verification
-- Dramatically reduce manual work
+### 🗺️ Roadmap
+- [x] Core labeling engine ✅  
+- [ ] **AI pre-labeling with YOLO model** (Phase 1)
+- [ ] Export to COCO, Pascal VOC
+- [ ] Video frame labeling
+- [ ] Plugin system
+- [ ] Web version (Flask + React)
 
-### 🚀 Enhanced Features
-- [ ] **AI pre-labeling** - YOLO model suggests boxes automatically
-- [ ] **Multi-object tracking** - Track objects across video frames
-- [ ] **Export to multiple formats** - COCO, Pascal VOC, etc.
-- [ ] **Team collaboration** - Multiple annotators, one project
-- [ ] **Quality metrics** - Detect annotation inconsistencies
-- [ ] **Plugin system** - Extend functionality with custom plugins
-- [ ] **Web version** - Browser-based annotation
-- [ ] **API integration** - Connect to model training pipelines
-
-### 🤖 AI Integration Roadmap
-1. **Phase 1**: Basic YOLO model for object suggestions
-2. **Phase 2**: Smart box refinement using AI
-3. **Phase 3**: Active learning - model improves from your corrections
-4. **Phase 4**: Full AI-assisted workflow
+> 🌟 **Want to help build the AI feature?** Contributions welcome!
 
 ---
 
 ## 🐛 Troubleshooting
 
-### Common Issues
+| Issue | Solution |
+|------|--------|
+| "No module named 'cv2'" | Run `pip install opencv-python` |
+| Blank/gray canvas | Ensure image directory contains `.jpg`, `.png`, etc. |
+| Labels not saving | Check write permissions in label directory |
+| App crashes on startup | Delete `session_history.pkl` and restart |
 
-**Problem**: Images not loading  
-**Solution**: Check image paths and ensure files are not corrupted
-
-**Problem**: Labels not saving  
-**Solution**: Verify write permissions in label directory
-
-**Problem**: Performance issues with large images  
-**Solution**: Enable GPU acceleration in config or resize images
-
-**Problem**: UI looks different  
-**Solution**: Reset config file or check display scaling settings
-
-### Getting Help
-- Check the `logs/` folder for detailed error information
-- Ensure all dependencies are properly installed
-- Verify Python version compatibility
+Logs are saved in the `logs/` folder — check them for details!
 
 ---
 
 ## 🤝 Contributing
 
-We love contributions! Here's how you can help:
+We ❤️ contributors! To get started:
+1. Fork the repo
+2. Create a branch: `git checkout -b feature/your-idea`
+3. Commit & push your changes
+4. Open a Pull Request
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Setup
-```bash
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run tests
-python -m pytest tests/
-
-# Code formatting
-black yolo_labeling_tool.py
-```
+> 📌 Looking for ideas? Check the [Issues](https://github.com/SisroCodeke/yolo-labeling-studio/issues) tab!
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
 
 ---
 
-## 🏆 Acknowledgments
+## 🙏 Acknowledgments
 
-- Built with amazing open-source libraries: OpenCV, PIL, Tkinter
-- Inspired by the computer vision community
-- Special thanks to all contributors and testers
+- Built with **OpenCV**, **Pillow**, **Tkinter**, and **Python**
+- Inspired by the need for better open-source labeling tools
+- Thanks to the computer vision community ❤️
 
 ---
 
 <div align="center">
 
-**Happy Labeling! 🎯**
-
-*If this tool saves you time, consider giving it a ⭐ on GitHub!*
+**Happy Labeling! 🎯**  
+*If this saves you time, give it a ⭐ on GitHub!*
 
 </div>
-```
-
-
-when i click on Features it will move to that part but when i click on installation it wont go therer!@
-why ?
