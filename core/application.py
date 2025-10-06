@@ -363,19 +363,21 @@ class YOLOLabelStudio:
         
         try:
             with open(label_path, 'w') as f:
+
                 for box_dict in self.boxes:
                     box = BoxUtils.from_dict(box_dict)
                     h_img, w_img = self.original_image.shape[:2]
-                    
-                    # Convert to YOLO format
+                    # Convert to YOLO format: [class_id, x_center, y_center, width, height]
                     yolo_coords = BoxUtils.pixel_to_yolo(box, w_img, h_img)
-                    
-                    # Validate coordinates
                     if self._validate_yolo_coordinates(yolo_coords):
-                        line = " ".join(f"{coord:.6f}" for coord in yolo_coords)
+                        class_id = int(yolo_coords[0])  # Ensure integer
+                        coords = yolo_coords[1:]        # The 4 float values
+                        coord_str = " ".join(f"{c:.4f}" for c in coords)
+                        line = f"{class_id} {coord_str}"
                         f.write(line + "\n")
                     else:
                         self.logger.warning(f"Invalid box coordinates: {box_dict}")
+
                         
             self.save_state()
             self.ui.set_status(f"Labels saved: {len(self.boxes)} boxes")
