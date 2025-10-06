@@ -1,0 +1,190 @@
+{
+  // YOLO Labeling Studio Pro Configuration
+  // This file contains all customizable settings for the application
+  // Comments are supported using JSONC (JSON with Comments) format
+
+  "app": {
+    "window_title": "YOLO Labeling Studio Pro - RealTime FIXED",
+    "window_geometry": "1280x900",
+    "theme": "dark",
+    "status_bar": true,
+    "confirm_on_exit": true,
+    "autosave_on_navigation": true,
+    "load_previous_session": true,
+    "initial_zoom": 1.0,
+    "min_zoom": 0.1,
+    "max_zoom": 5.0,
+    "zoom_factor_in": 1.25,
+    "zoom_factor_out": 1.25,
+    "mouse_wheel_zoom": true,
+    "mouse_wheel_zoom_step": 1.15,
+    "session_history_file": "session_history.pkl"
+  },
+
+  "paths": {
+    "image_dir": "",
+    "label_dir": "",
+    "processed_dir": "processed",
+    "log_dir": "logs",
+    "font_search_paths": [
+      "arial.ttf",
+      "Vazirmatn-Regular.ttf",
+      "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+      "C:/Windows/Fonts/arial.ttf"
+    ],
+    "default_config_save": "yolo_gui_config.json"
+  },
+
+  "classes": {
+    // Add your custom class names here
+    "class_names": ["vehicle", "plate", "person", "traffic_light", "stop_sign", "bicycle", "motorcycle", "bus", "truck"],
+    "show_class_index": false,
+    "rtl_naive_reverse": true,
+    "min_box_draw_pixels": 3,
+    "restrict_drawing_inside_image": true
+  },
+
+  "drawing": {
+    "color_mode": "golden_angle",
+    "golden_angle_offset": 137,
+    "fixed_colors": {},
+    "random_seed": 1234,
+    "hsv_saturation": 0.7,
+    "hsv_value": 1.0,
+    "box_line_width": 2,
+    "ed_box_line_width": 3,
+    "selected_box_line_width": 3,
+    "handle_size": 6,
+    "handle_color": "#0000ff",
+    "handle_fill_selected": "#0000ff",
+    "draw_handles": true,
+    "draw_label_background": true,
+    "label_text_color": "#000000",
+    "selected_outline_contrast_color": "#000000",
+    "font_size": 12,
+    "label_padding": 4,
+    "inside_fallback_when_no_space": true,
+    "resize_interpolation": "nearest",
+    "show_fps_overlay": false,
+    "translucent_selected": false,
+    "selected_alpha": 128,
+    "enable_canvas_cache": true,
+    "cache_zoom_levels": true,
+    "real_time_drawing": true,
+    "min_redraw_interval": 16,
+    "edge_hit_margin": 8
+  },
+
+  "font": {
+    "preferred_font": "arial.ttf",
+    "fallback_to_default": true
+  },
+
+  "history": {
+    "undo_history_size": 100,
+    "auto_save_state_on_load": true
+  },
+
+  "label_format": {
+    "type": "yolo",
+    "float_precision": 6,
+    "sort_boxes_on_save": false,
+    "include_trailing_newline": true
+  },
+
+  "behavior": {
+    "allow_move": true,
+    "allow_resize": true,
+    "new_box_starts_on_click": true,
+    "use_drag_for_box": true,
+    "select_on_right_click": true,
+    "deselect_class_on_right_click_list": true,
+    "deselect_box_on_second_click": true,
+    "auto_move_processed_images": true,
+    "select_first_box_on_class_click": false,
+    "enable_batch_operations": true,
+    "smart_rendering": true,
+    "lazy_image_loading": true,
+    "keep_class_selected_after_drawing": true,
+    "update_image_paths_after_move": true,
+    "real_time_box_preview": true
+  },
+
+  "keybindings": {
+    // Keyboard shortcuts for power users
+    "save": "Control-s",
+    "undo": "Control-z",
+    "delete_box": "Delete",
+    "prev_image": ["Left", "a"],
+    "next_image": ["Right", "d"],
+    "zoom_in": "plus",
+    "zoom_out": "minus",
+    "reset_zoom": "r",
+    "toggle_dark_mode": "Control-d",
+    "select_all_boxes": "Control-a",
+    "duplicate_box": "Control-d",
+    "quick_save_next": "Control-Shift-s",
+    "reload_image": "i"
+  },
+
+  "logging": {
+    "level": "INFO",
+    "log_to_console": true,
+    "filename_timestamp_format": "%Y%m%d_%H%M%S",
+    "max_bytes": 10485760,
+    "backup_count": 5
+  },
+
+  "constraints": {
+    "clamp_boxes_inside_image": true,
+    "prevent_negative_coords": true,
+    "min_box_side_pixels": 2
+  },
+
+  "autosave": {
+    "enabled": true,
+    "on_interval_seconds": 120,
+    "on_class_change": false
+  },
+
+  "plugins": {
+    "enabled": [],
+    "config": {}
+  },
+
+  "performance": {
+    "image_cache_size": 5,
+    "enable_selective_rendering": true,
+    "render_throttle_ms": 16,
+    "optimize_memory_usage": true,
+    "enable_gpu_acceleration": false,
+    "enable_double_buffering": true,
+    "use_canvas_items": true,
+    "max_fps": 60
+  },
+
+  "ui": {
+    "show_tooltips": true,
+    "animate_transitions": true,
+    "smooth_scrolling": true,
+    "highlight_hover": true,
+    "button_style": "modern"
+  },
+
+  "export": {
+    "create_backup": true,
+    "backup_count": 3,
+    "validate_before_save": true,
+    "auto_export_formats": ["yolo"],
+    "export_image_copy": false
+  },
+
+  "ai_assistant": {
+    // Future feature: AI-powered labeling assistance
+    "enabled": false,
+    "model_path": "",
+    "confidence_threshold": 0.5,
+    "auto_suggest_boxes": false,
+    "suggest_on_load": false
+  }
+}
