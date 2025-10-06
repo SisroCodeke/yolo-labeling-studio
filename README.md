@@ -1,16 +1,8 @@
----
 
-## ✅ 1. **Repository Description**
+# 🎯 YOLO Labeling Studio
 
 > 🎯 Professional YOLO labeling tool with real-time rendering, movable box edges, dark mode, session recovery, and planned AI-assisted pre-labeling.
 
----
-
-## ✅ 2. **README.md**
-
-Below is a **polished, user-friendly, and technically accurate** `README.md` that matches your code structure and future plans:
-
-```markdown
 # 🎯 YOLO Labeling Studio Pro
 
 <div align="center">
