@@ -12,7 +12,7 @@
 
 **Professional YOLO annotation tool with real-time performance, movable edges, and AI-ready workflow**
 
-[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Future Plans](#-future-plans)
+[Features](#-features) • [Installation](#%EF%B8%8F-installation) • [Usage](#-usage) • [Future Plans](#-future-plans)
 
 </div>
 
