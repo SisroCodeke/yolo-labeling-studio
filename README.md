@@ -22,7 +22,7 @@ Here's the corrected version that you can copy and paste directly:
 
 **Professional YOLO annotation tool with real-time performance and smart features**
 
-[Features](#-features) • [Installation](#-Installation) • [Usage](#-Usage) • [Future Plans](#-future-plans)
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Future Plans](#-future-plans)
 
 </div>
 
