@@ -10,7 +10,7 @@ No, there are several formatting issues with your README.md. The main problems a
 
 Here's the corrected version that you can copy and paste directly:
 
-```markdown
+
 # 🎯 YOLO Labeling Studio Pro
 
 <div align="center">
