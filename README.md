@@ -3,8 +3,6 @@
 
 > 🎯 Professional YOLO labeling tool with real-time rendering, movable box edges, dark mode, session recovery, and planned AI-assisted pre-labeling.
 
-# 🎯 YOLO Labeling Studio Pro
-
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
