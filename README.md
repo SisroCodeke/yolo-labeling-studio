@@ -42,7 +42,7 @@ YOLO Labeling Studio Pro is not just another annotation tool - it's your **AI-po
 
 ---
 
-## 🎨 Features
+## Features
 
 ### Core Annotation
 - ✅ **YOLO format support** - Direct export to YOLO txt files
@@ -66,7 +66,7 @@ YOLO Labeling Studio Pro is not just another annotation tool - it's your **AI-po
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 ### Prerequisites
 - Python 3.8 or higher
@@ -118,7 +118,7 @@ pip install opencv-python pillow numpy
 
 ---
 
-## 🎮 How to Use
+## How to Use
 
 ### 🖱️ Basic Workflow
 
@@ -177,7 +177,7 @@ Edit `config.jsonc` to customize:
 
 ---
 
-## 🔮 Future Plans
+## Future Plans
 
 ### 🧠 AI-Powered Features (Coming Soon!)
 
