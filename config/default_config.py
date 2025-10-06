@@ -23,7 +23,7 @@ DEFAULT_CONFIG = {
     "paths": {
         "image_dir": "",
         "label_dir": "",
-        "processed_dir": "processed",
+        "processed_dir": "sample",
         "log_dir": "logs",
         "font_search_paths": [
             "arial.ttf",
