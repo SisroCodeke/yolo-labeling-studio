@@ -1,6 +1,15 @@
 # yolo-labeling-studio
 🎯 Advanced YOLO Labeling Tool with Real-Time Performance - A feature-rich desktop application for creating YOLO format datasets with movable edges, smart rendering, and professional annotation workflow.
 
+No, there are several formatting issues with your README.md. The main problems are:
+
+1. **Missing code block formatting** for Windows installation
+2. **Missing section headers** (##) for some sections
+3. **Incorrect markdown formatting** for the feature checklist
+4. **Broken structure** in the middle sections
+
+Here's the corrected version that you can copy and paste directly:
+
 ```markdown
 # 🎯 YOLO Labeling Studio Pro
 
