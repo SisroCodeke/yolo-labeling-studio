@@ -1,3 +1,4 @@
+in this README.md:
 # yolo-labeling-studio
 🎯 Advanced YOLO Labeling Tool with Real-Time Performance - A feature-rich desktop application for creating YOLO format datasets with movable edges, smart rendering, and professional annotation workflow.
 
@@ -22,7 +23,7 @@ Here's the corrected version that you can copy and paste directly:
 
 **Professional YOLO annotation tool with real-time performance and smart features**
 
-[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Future Plans](#-future-plans)
+[Features](#-features) • [Installation](#-Installation) • [Usage](#-Usage) • [Future Plans](#-future-plans)
 
 </div>
 
@@ -42,7 +43,7 @@ YOLO Labeling Studio Pro is not just another annotation tool - it's your **AI-po
 
 ---
 
-## Features
+## 🎨 Features
 
 ### Core Annotation
 - ✅ **YOLO format support** - Direct export to YOLO txt files
@@ -66,7 +67,7 @@ YOLO Labeling Studio Pro is not just another annotation tool - it's your **AI-po
 
 ---
 
-## Installation
+## 🛠️ Installation
 
 ### Prerequisites
 - Python 3.8 or higher
@@ -118,7 +119,7 @@ pip install opencv-python pillow numpy
 
 ---
 
-## How to Use
+## 🎮 How to Use
 
 ### 🖱️ Basic Workflow
 
@@ -177,7 +178,7 @@ Edit `config.jsonc` to customize:
 
 ---
 
-## Future Plans
+## 🔮 Future Plans
 
 ### 🧠 AI-Powered Features (Coming Soon!)
 
@@ -274,3 +275,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 </div>
 ```
+
+
+when i click on Features it will move to that part but when i click on installation it wont go therer!@
+why ?
