@@ -1,7 +1,8 @@
+---
 
 # 🎯 YOLO Labeling Studio
 
-> 🎯 Professional YOLO labeling tool with real-time rendering, movable box edges, dark mode, session recovery, and planned AI-assisted pre-labeling.
+> 🎯 Professional YOLO labeling tool with real-time rendering, movable box edges, dark mode, session recovery, and **AI-assisted pre-labeling**.
 
 <div align="center">
 
@@ -10,9 +11,9 @@
 ![Tkinter](https://img.shields.io/badge/GUI-Tkinter-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-**Professional YOLO annotation tool with real-time performance, movable edges, and AI-ready workflow**
+**Professional YOLO annotation tool with real-time performance, movable edges, and built-in AI assistance**
 
-[Features](#-features) • [Installation](#%EF%B8%8F-installation) • [Usage](#-how-to-use) • [Future Plans](#-future-plans)
+[Features](#-features) • [Installation](#%EF%B8%8F-installation) • [Usage](#-how-to-use) • [AI Assistant](#-ai-assistant)
 
 </div>
 
@@ -20,9 +21,9 @@
 
 ## 🚀 What is This?
 
-**YOLO Labeling Studio Pro** is a desktop application built for **serious annotators** who need speed, precision, and comfort while labeling images in YOLO format. Unlike basic tools, it offers **movable box edges**, **real-time preview**, **session recovery**, and **keyboard-driven workflow**—all in a sleek, responsive interface.
+**YOLO Labeling Studio Pro** is a desktop application built for **serious annotators** who need speed, precision, and comfort while labeling images in YOLO format. Unlike basic tools, it offers **movable box edges**, **real-time preview**, **session recovery**, **keyboard-driven workflow**, and now—**AI-powered pre-labeling** using YOLOv8.
 
-And soon? **AI pre-labeling** using a YOLO model to auto-detect objects before you even start!
+> ✨ **Label 5x faster**: Let AI suggest boxes on image load—then edit, accept, or discard them with one click.
 
 ---
 
@@ -42,6 +43,12 @@ And soon? **AI pre-labeling** using a YOLO model to auto-detect objects before y
 - **Processed image management** – Auto-move finished images
 - **Progress bar** – Track your labeling progress
 
+### 🤖 AI Assistant (NEW!)
+- **YOLOv8n pre-labeling** – Detect objects on image load
+- **Configurable classes** – Choose which COCO classes to detect
+- **Editable suggestions** – Modify or delete AI boxes like manual ones
+- **Toggle on/off** – Enable only when needed via config
+
 ### 🌓 User Experience
 - **Dark/Light theme toggle** (`Ctrl+D`)
 - **Full keyboard shortcuts** – Power-user friendly
@@ -55,7 +62,7 @@ And soon? **AI pre-labeling** using a YOLO model to auto-detect objects before y
 ### Prerequisites
 - Python 3.8+
 - ~500 MB disk space
-- (Optional) GPU not required – runs on CPU
+- Internet connection (to auto-download YOLOv8n on first AI use)
 
 ### 🐧 Linux
 
@@ -67,7 +74,7 @@ cd yolo-labeling-studio
 python3 -m venv venv
 source venv/bin/activate
 
-# Install dependencies
+# Install dependencies (including AI support)
 pip install -r requirements.txt
 
 # Run the app
@@ -96,7 +103,7 @@ pip install -r requirements.txt
 python main.py
 ```
 
-> ✅ Windows users: `tkinter`, `PIL`, and `numpy` are usually included with Python, but `opencv-python` must be installed via pip.
+> ✅ **AI Note**: The first time you enable AI, the app will auto-download `yolov8n.pt` (~6 MB).
 
 ---
 
@@ -131,18 +138,29 @@ python main.py
 
 ---
 
+## 🤖 AI Assistant
+
+### How It Works
+1. Enable AI in your `config.json`:
+   ```json
+   "ai_assistant": {
+     "enabled": true,
+     "suggest_on_load": true,
+     "enabled_classes": [2, 5, 7],  // car, bus, truck
+     "confidence_threshold": 0.5
+   }
+   ```
+2. When you open an image, YOLOv8n runs automatically.
+3. Detected boxes appear as **editable suggestions** (same as manual boxes).
+4. You can **move, resize, delete, or keep** them—no special workflow!
+
 ## 🔮 Future Plans
 
-### 🤖 AI-Powered Pre-Labeling (Coming Soon!)
-We’re adding **built-in YOLO object detection** so the tool can:
-- Load a pre-trained YOLO model (e.g., YOLOv8n)
-- Auto-detect objects when an image loads
-- Let you **accept, edit, or delete** suggested boxes
-- **Dramatically reduce labeling time** by 50–80%
+
 
 ### 🗺️ Roadmap
 - [x] Core labeling engine ✅  
-- [ ] **AI pre-labeling with YOLO model** (Phase 1)
+- [x] **AI pre-labeling with YOLO model** (Phase 1)
 - [ ] Export to COCO, Pascal VOC
 - [ ] Video frame labeling
 - [ ] Plugin system
@@ -152,11 +170,23 @@ We’re adding **built-in YOLO object detection** so the tool can:
 
 ---
 
+### Requirements
+- Add `ultralytics` to your environment:
+  ```bash
+  pip install ultralytics
+  ```
+- Your `classes.class_names` should include COCO class names (or map them).
+
+> ⚠️ **Note**: AI only suggests boxes if **no manual labels exist** for that image (configurable).
+
+---
+
 ## 🐛 Troubleshooting
 
 | Issue | Solution |
 |------|--------|
 | "No module named 'cv2'" | Run `pip install opencv-python` |
+| "No module named 'ultralytics'" | Run `pip install ultralytics` |
 | Blank/gray canvas | Ensure image directory contains `.jpg`, `.png`, etc. |
 | Labels not saving | Check write permissions in label directory |
 | App crashes on startup | Delete `session_history.pkl` and restart |
@@ -185,7 +215,7 @@ Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
 
 ## 🙏 Acknowledgments
 
-- Built with **OpenCV**, **Pillow**, **Tkinter**, and **Python**
+- Built with **OpenCV**, **Pillow**, **Tkinter**, **Python**, and **Ultralytics YOLOv8**
 - Inspired by the need for better open-source labeling tools
 - Thanks to the computer vision community ❤️
 
@@ -197,3 +227,5 @@ Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
 *If this saves you time, give it a ⭐ on GitHub!*
 
 </div>
+
+---
