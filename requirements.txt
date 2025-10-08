@@ -4,4 +4,4 @@ Pillow>=8.0.0
 numpy>=1.19.0
 
 # Optional: for future AI features (comment out for now)
-# ultralytics  # for YOLOv8 (uncomment later)
+ultralytics  # for YOLOv8 (uncomment later)
