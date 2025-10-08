@@ -19,6 +19,7 @@ from ui.main_window import MainWindow
 from utils.file_utils import FileUtils
 from utils.text_utils import contains_persian
 from models.bounding_box import BoxUtils
+from core.ai_predictor import AIPredictor
 
 CONFIG = load_config()
 
@@ -36,6 +37,12 @@ class YOLOLabelStudio:
             # Application state
             self._initialize_state()
             
+            # AI Assistant
+            self.ai_predictor = None
+            if CONFIG["ai_assistant"]["enabled"]:
+                self.ai_predictor = AIPredictor()
+                # Model loads lazily on first use
+
             # Setup UI first
             self.ui = MainWindow(self.root, self)
             
@@ -200,27 +207,49 @@ class YOLOLabelStudio:
             self.ui.set_status("No image to reload")
 
     def load_image(self):
-        """Load current image with caching"""
+        """Load current image with caching and optional AI pre-labeling"""
         if not self.image_files or self.current_index < 0:
             return
-            
+
         path = self.image_files[self.current_index]
-        
-        # Check if file exists and handle processed images
         path = self._handle_missing_image(path)
         if not path:
             return
-            
-        # Load image with caching
+
+        # Load image
         self.original_image = FileUtils.load_image_with_caching(path, self.image_cache.cache)
         if self.original_image is None:
             messagebox.showerror("Image Error", f"Failed to load: {os.path.basename(path)}")
             return
-            
+
         self._setup_image_state(path)
+
+        # Load manual labels FIRST
         self.load_labels()
+
+        # ✅ AI Pre-labeling (only if no manual labels exist, or always — your choice)
+        if (CONFIG["ai_assistant"]["enabled"] and
+            self.ai_predictor is not None and
+            CONFIG["ai_assistant"]["suggest_on_load"]):
+
+            self.ui.set_status("Running AI pre-labeling...")
+            ai_boxes = self.ai_predictor.predict(self.original_image)
+
+            # Policy: Only add AI boxes if no manual boxes exist
+            if ai_boxes:
+                if not self.boxes:
+                    # Convert AI box dicts directly into self.boxes
+                    self.boxes.extend(ai_boxes)
+                    self.ui.set_status(f"Added {len(ai_boxes)} AI-suggested boxes")
+                else:
+                    self.ui.set_status("Manual labels exist — skipped AI suggestions")
+            else:
+                self.ui.set_status("No objects detected by AI")
+
+        # Finalize
         self.save_state()
-        self.renderer.mark_dirty()
+        self.update_status_label()
+        self.renderer.mark_dirty()  # 🔥 Critical: triggers visual update
 
     def _handle_missing_image(self, path: str) -> Optional[str]:
         """Handle missing image file by checking processed directory"""
