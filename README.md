@@ -1,4 +1,3 @@
----
 
 # 🎯 YOLO Labeling Studio
 
@@ -16,8 +15,6 @@
 [Features](#-features) • [Installation](#%EF%B8%8F-installation) • [Usage](#-how-to-use) • [AI Assistant](#-ai-assistant)
 
 </div>
-
----
 
 ## 🚀 What is This?
 
